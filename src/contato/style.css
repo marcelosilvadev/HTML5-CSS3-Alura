@@ -1,0 +1,75 @@
+header {
+  background: #BBB;
+}
+
+.caixa {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+}
+
+nav {
+  position: absolute;
+  /*Vc conesegue posicionar onde vc quiser */
+  top: 110px;
+  right: 0;
+}
+
+nav li {
+  display: inline;
+  /*Deixa alinha na vertical os items do menu*/
+  margin: 0 0 0 15px;
+}
+
+nav a {
+  text-transform: uppercase;
+  /*Transforma texto em UPPERCASE*/
+  color: #000;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #C78C19;
+  text-decoration: underline;
+}
+
+main {
+  width: 940px;
+  margin: 0 auto;
+}
+
+form {
+  margin: 40px;
+}
+
+form label, form legend {
+  display: block;
+  /*Utilizamos display:block para que o elemento ocupe a linha toda e jogo o proxo para baixo dele*/
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-padrao {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+footer {
+  text-align: center;
+  background: url("../../imagens/bg.jpg");
+  padding: 40px 0;
+}
+
+.copyright {
+  color: #FFF;
+  font-size: 13px;
+  margin: 20px 0;
+}
