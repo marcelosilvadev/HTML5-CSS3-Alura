@@ -44,7 +44,8 @@ form {
   margin: 40px;
 }
 
-form label, form legend {
+form label,
+form legend {
   display: block;
   /*Utilizamos display:block para que o elemento ocupe a linha toda e jogo o proxo para baixo dele*/
   font-size: 20px;
@@ -61,6 +62,45 @@ form label, form legend {
 .checkbox {
   margin: 20px 0;
 }
+
+.enviar {
+  width: 40%;
+  padding: 15px 0;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  transition: 1s all;
+  /*TRANSITION -> Tempo para transformação do HOVER e em qual propriedade se aplicara a transformação*/
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background: darkorange;
+  transform: scale(1.2);
+  /*SCALE -> Aumenta em uma porcentagem o elemento ou diminui */
+  transform: rotate(360deg);
+  /*ROTATE ->Utilizado para girar o componente em uma quantidade de graus */
+}
+
+table {
+  margin: 20px 0 40px;
+}
+
+thead {
+  background: #555555;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid #000000;
+  padding: 15px 8px;
+}
+
 
 footer {
   text-align: center;
