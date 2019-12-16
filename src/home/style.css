@@ -1,3 +1,7 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 header {
 	background: #BBB;
 }
@@ -37,8 +41,6 @@ nav a:hover {
 
 main {
 	position: relative;
-	width: 940px;
-	margin: 0 auto;
 }
 
 .banner {
@@ -51,6 +53,37 @@ main {
 	/*EM siginifica o dobro do tamanho padrão*/
 	margin: 0 0 1em;
 	clear: left;
+	/* Utilizamos o rgba para ter um valor para sua opacidade */
+	color: rgba(0,0,0,0.4);
+	/* Utilizamos text-shadow para colocar sombras em palavras */
+	/* text-shadow: 2px 2px 2px #FFFFFF; */
+}
+
+.titulo-principal::first-letter {
+	/* Seleciona a primeira letra da frase */
+	/* font-weight: bold; */
+}
+
+.titulo-principal::before{
+	/* Insere algo antes da frase */
+	/* content: "[ "; */
+}
+
+.titulo-principal::after{
+	/* Insere algo depois da frase */
+	/* content: " ]"; */
+}
+
+p::first-line {
+	/* Seleciona a linha e insere suas parametrizações */
+	/* font-style: italic; */
+}
+
+.principal {
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
 }
 
 .principal p {
@@ -71,8 +104,92 @@ main {
 	margin: 0 20px 20px 0;
 }
 
-.imagembeneficios {
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+	/* Utilizamos inset para colocar uma sombra interna em um componente */
+	/* box-shadow: inset 0 0 30px #FF0000; */
+}
+
+.conteudo-beneficios {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5;
+}
+
+.itens:first-child {
+	font-weight: bold;
+}
+
+.itens::before{
+	content: "🟊";
+}
+
+/* :first-child => Seleciona o primeiro elemento da lista */
+/* :last-child => Seleciona o ultimo elemento da lista */
+/* :nth-child(4) => Seleciona a index do elemento informado da lista */
+/* :nth-child(2n) => Seleciona todos os elementos pares */
+
+.imagem-beneficios {
 	width: 60%;
+	opacity: 1;
+	transition: 500ms;
+	/* utilizamos o box-shadow para colcoar uma sombra sobre o elemento onde na ordem é inserido os px do eixo X e depois o eixo Y
+	a opacidade da borda em PX e depois o tamanho da borda. Ela permite que voce insira mais de uma borda */
+	box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagem-beneficios:hover{
+	opacity: 0.3;
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+}
+
+main > p {
+	/* Selecionamos todos os p que são filhos diretos do main */
+	/* background: red; */
+}
+
+img + p {
+	/* Selecionamos só o p que vem depois de uma imagem, atribnuto irmão */
+	/* background: blue; */
+}
+
+img ~ p {
+	/* Selecionamos todos os p que vem depois de uma imagem */
+	/* background: blue; */
+}
+
+.principal p:not(#missao){
+	/* Seleciona todos os p que não tem o id #missao */
+	/* background: coral; */
 }
 
 footer {
@@ -86,3 +203,25 @@ footer {
 	font-size: 13px;
 	margin: 20px 0;
 }
+
+
+/*
+Seletores avançados CSS
+
+Seletor >, para acessar os filhos de determinado elemento. Por exemplo, para acessar todos os p dentro de main:
+main > p {
+}
+
+Seletor +, para acessar o primeiro irmão de determinado elemento. Por exemplo, para acessar o primeiro p após um img:
+img + p {
+}
+
+Seletor ~, para acessar todos os irmãos de determinado elemento. Por exemplo, para acessar todos os p após um img:
+img ~ p {
+}
+
+Seletor not, para acessar os elementos, exceto algum. Por exemplo, para acessar todos os p dentro de main, exceto o p que tem id missao:
+main p:not(#missao) {
+}
+
+Como fazer contas com CSS, com a propriedade calc */
