@@ -225,3 +225,22 @@ main p:not(#missao) {
 }
 
 Como fazer contas com CSS, com a propriedade calc */
+
+/* Utilizamos o @media para saber o tamanho da tela e resscrever uma configuração personalizada para cada tamanho */
+@media screen and (max-width: 480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+			width: auto;
+	}
+
+	h1 {
+			text-align: center;
+	}
+
+	nav {
+			position: static;
+	}
+
+	.lista-beneficios, .imagem-beneficios {
+			width: 100%;
+	}
+}
